@@ -1,0 +1,50 @@
+\usepackage[latin1]{inputenc}
+\usepackage[english, spanish]{babel}
+
+\usepackage[dvips,final,a4paper,colorlinks=false, bookmarks=true,
+bookmarksopen=false, bookmarksnumbered=false,
+backref={page},raiselinks=true,linktocpage=true,
+pdfstartpage={1},
+pdftitle={},
+pdfsubject={},
+pdfauthor={},
+pdfkeywords={},
+breaklinks=true]{hyperref}
+
+\usepackage{amsfonts,amssymb,amsmath,amsthm}
+\usepackage{graphicx}
+\usepackage{url}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\usepackage[ruled,vlined,algochapter]{algorithm2e}
+\SetAlgorithmName{Algoritmo}{Algoritmo}{Lista de algoritmos}
+
+\newtheorem{theorem}{Teorema}
+\theoremstyle{definition}
+\newtheorem{remark}{Nota}
+\newtheorem{system}{Sistema}
+
+\addto\captionsspanish{%
+\def\bibname{Referencias}%
+\def\tablename{Tabla}%
+%\def\listfigurename{Índice de tablas}%
+}
+
+\setcounter{secnumdepth}{4}
+
+\renewcommand{\headrulewidth}{0pt}
+%\setlength{\headheight}{11pt}
+%Todas las páginas
+\lhead{}
+\chead{}
+\rhead{\thepage}
+
+\lfoot{}
+\cfoot{}
+
+\AtBeginDocument {
+\renewcommand{\listtablename}{\'Indice de tablas}
+\renewcommand{\tablename}{Tabla}
+}

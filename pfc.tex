@@ -1,0 +1,50 @@
+\documentclass[a4paper]{report}
+
+\include{inc/includes}
+\include{inc/definitions}
+
+\begin{document}
+
+%%%% front matter
+
+\include{frontmatter/keywords}
+
+%Páginas especiales
+\pagenumbering{roman}
+\fancypagestyle{plain}{%
+\fancyhf{} \fancyfoot[C]{} \fancyhead[L]{} \fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\tableofcontents \clearpage
+\listoffigures \clearpage
+\listoftables \clearpage
+
+%%%% main matter
+
+\renewcommand{\headrulewidth}{0.4pt}
+\lhead{\nouppercase{\rightmark}}
+\fancypagestyle{plain}{%
+\fancyhf{}
+\fancyfoot[C]{}
+\fancyhead[L]{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}}
+\pagenumbering{arabic}
+
+\include{content/chapter1}
+\include{content/chapter2}
+\include{content/chapter3}
+
+
+%%%% back matter
+
+\bibliographystyle{ieeetr}
+\addcontentsline{toc}{chapter}{Referencias}
+\bibliography{backmatter/biblio}
+
+%% insert blank double page
+%\clearpage\thispagestyle{empty}\mbox{}\clearpage %
+%\clearpage\thispagestyle{empty}\mbox{}\clearpage
+\end{document} 
